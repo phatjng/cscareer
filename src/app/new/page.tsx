@@ -1,10 +1,10 @@
 import { reddit } from "@/reddit";
-import Post from "./components/Post";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Post from "../components/Post";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default async function Home() {
-  const posts = await reddit.getSubreddit("cscareerquestions").getHot();
+  const posts = await reddit.getSubreddit("cscareerquestions").getNew();
 
   return (
     <div className="">
